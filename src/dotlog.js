@@ -1,4 +1,4 @@
-var consoleTest = ( function() {
+export const dotLog = ( function() {
 
     function predicate(testrule = false, testlabel = 'test label:') {
         return ( testrule ) ? console.log(`%c${testlabel}`, 'color: green') : console.log(`%c${testlabel}`, 'color: red; font-weight: bold;');

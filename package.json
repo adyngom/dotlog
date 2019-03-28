@@ -4,7 +4,14 @@
   "description": "Putting our beloved console.log on steroids to mimic (not replace) a testing suite right in the JS console.",
   "main": "consoleTest.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest",
+    "dev": "watch 'npm run build' src",
+    "build": "babel src -d build"
+  },
+  "babel": {
+    "presets": [
+      "latest"
+    ]
   },
   "repository": {
     "type": "git",
@@ -20,5 +27,10 @@
   "bugs": {
     "url": "https://github.com/adyngom/dotlog/issues"
   },
-  "homepage": "https://github.com/adyngom/dotlog#readme"
+  "homepage": "https://github.com/adyngom/dotlog#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-latest": "^6.24.1",
+    "watch": "^1.0.2"
+  }
 }
